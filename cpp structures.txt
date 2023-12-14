@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+// used typedef to avoid writing struct employee again and again and instead use the expression after struct definition to reference struct
+typedef struct employee{
+    int empid;
+    char gender;
+    int age;
+} emp;
+
+
+int main() {
+    emp ishan; // wouldve used struct employee ishan if typedef wasnt specified at the structure initialisation
+    ishan.empid = 118;
+    ishan.gender = 'M';
+    ishan.age = 18;
+    cout << "EMPID : " << ishan.empid <<endl;
+    
+    return 0;
+}

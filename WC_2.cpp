@@ -1,0 +1,32 @@
+#include <iostream>
+#include <string>
+
+int t1;
+int t2;
+int t3;
+
+int main() {
+    t1 = 1;
+    t2 = 1;
+
+    int n;  // Declare n as an integer
+    std::cout;
+    std::cin >> n;  // Read the value of n from the user
+
+    if (n == 0)
+        std::cout << 0 << std::endl;
+    else if (n == 1 || n == 2)
+        std::cout << 1 << std::endl;
+    else if (n >= 3) {
+        for (int i = 0; i < n - 2; i++) {
+            t3 = t1 + t2;
+            t1 = t2;
+            t2 = t3;
+        }
+        std::string str_t3 = std::to_string(t3);
+        char last_char = str_t3[str_t3.length() - 1];
+        std::cout << last_char << std::endl;
+    }
+
+    return 0;
+}

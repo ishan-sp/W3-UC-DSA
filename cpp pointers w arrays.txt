@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+int a = 150394;
+int marks[] = {12, 123, 1234, 12345};
+int nus[4];
+
+int main() {
+    cout << "[Marks[0]]: " << marks[0] << "\n";
+    cout << "[Marks[1]]: " << marks[1] << "\n";
+    cout << "[Marks[2]]: " << marks[2] << "\n";
+    cout << "[Marks[3]]: " << marks[3] << "\n";
+
+    nus[0] = 5;
+    nus[1] = 46;
+    nus[2] = 89;
+    nus[3] = 74;
+
+    cout << "[Numbers[0]]: " << nus[0] << "\n";
+    cout << "[Numbers[1]]: " << nus[1] << "\n";
+    cout << "[Numbers[2]]: " << nus[2] << "\n";
+    cout << "[Numbers[3]]: " << nus[3] << "\n";
+
+    
+    
+    int *p = marks;
+    cout << "Address : " << p;
+    cout << "Marks 0 : " << *p << endl;
+    cout << "Marks 1 : " << *(++p) << endl;
+    cout << "Marks 2 : " << *(++p) << endl;
+    cout << "Marks 3 : " << *(++p) << endl;
+    
+    int *new_address = p + 4;
+    cout << "Address : " << p;
+    cout << "Address of marks 4 : " << new_address;
+    
+    
+    return 0;
+}
